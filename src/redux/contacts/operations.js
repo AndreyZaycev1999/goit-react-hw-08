@@ -1,40 +1,52 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-axios.defaults.baseURL = "https://6623edc13e17a3ac8470ab17.mockapi.io";
+axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 export const fetchContacts = createAsyncThunk(
-  "contacts/fetchAll",
+  'contacts/fetchContacts',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get("/contacts");
+      const response = await axios.get('/contacts');
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const addContact = createAsyncThunk(
-  "contacts/addContact",
-  async (newContact, thunkAPI) => {
+  'contacts/addContact',
+  async (contact, thunkAPI) => {
     try {
-      const response = await axios.post("/contacts", newContact);
+      const response = await axios.post('/contacts', contact);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
 
 export const deleteContact = createAsyncThunk(
-  "contacts/deleteContact",
-  async (contactId, thunkAPI) => {
+  'contacts/deleteContact',
+  async (id, thunkAPI) => {
     try {
-      await axios.delete(`/contacts/${contactId}`);
-      return contactId;
+      const response = await axios.delete(`/contacts/${id}`);
+      return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
+);
+
+export const updateContact = createAsyncThunk(
+  'contacts/updateContact',
+  async (id, contact, thunkAPI) => {
+    try {
+      const response = await axios.patch(`/contacts/${id}`, contact);
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
     }
   }
 );

@@ -1,19 +1,13 @@
-.search_box {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-    width: 300px;
-    
+.form {
+    margin-bottom: 20px;
 }
 
-.search_box label {
-    display: flex;
-    flex-direction: column;
-    width: 100%
+label {
+    display: block;
+    margin-bottom: 5px;
 }
 
-.search_box label input {
-    border-radius: 5px;
-    height: 30px;
-    padding: 0 10px;
+input {
+    padding: 5px;
+    width: 100%;
 }
