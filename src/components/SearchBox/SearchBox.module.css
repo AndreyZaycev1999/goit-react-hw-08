@@ -1,13 +1,11 @@
-.form {
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+    margin: 0 auto;
     margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    padding: 5px;
-    width: 100%;
-}
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid black;
+  }

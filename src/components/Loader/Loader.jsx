@@ -1,18 +1,17 @@
+import { FallingLines } from "react-loader-spinner";
+import css from "./Loader.module.css";
+
 const Loader = () => {
-  return;
-  {
-    <div>
-      <ThreeCircles
-        visible={true}
-        height="100"
+  return (
+    <div className={css.loader}>
+      <FallingLines
+        color="rgb(99, 99, 141)"
         width="100"
-        color="#4fa94d"
-        ariaLabel="three-circles-loading"
-        wrapperStyle={{}}
-        wrapperClass=""
+        visible={true}
+        ariaLabel="falling-circles-loading"
       />
-    </div>;
-  }
+    </div>
+  );
 };
 
 export default Loader;

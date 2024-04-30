@@ -1,30 +1,35 @@
-import { FaUser } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
 import css from "./Contact.module.css";
+import { FaUser } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa6";
 import { useDispatch } from "react-redux";
 import { deleteContact } from "../../redux/contacts/operations";
 
-export default function Contact({ contact: { name, number, id } }) {
+const Contact = ({ contact }) => {
   const dispatch = useDispatch();
+  const contactId = contact.id;
+  const deletePhoneNumber = () => {
+    dispatch(deleteContact(contactId));
+  };
 
   return (
-    <div className={css.container}>
-      <div className={css.wrapper}>
-        <div className={css["wrapper-for-item"]}>
-          <FaUser></FaUser>
-          <p className={css.text}>{name}</p>
-        </div>
-        <div>
-          <BsFillTelephoneFill></BsFillTelephoneFill>
-          <p className={css.text}>{number}</p>
-        </div>
+    <li className={css.wrapper_contact}>
+      <div>
+        <h2>
+          <FaUser size="16" /> {contact.name}
+        </h2>
+        <p>
+          <FaPhone size="16" /> {contact.number}
+        </p>
       </div>
       <button
-        className={css.button}
-        onClick={() => dispatch(deleteContact(id))}
+        type="button"
+        className={css.delete_button}
+        onClick={deletePhoneNumber}
       >
         Delete
       </button>
-    </div>
+    </li>
   );
-}
+};
+
+export default Contact;
