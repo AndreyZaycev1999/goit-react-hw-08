@@ -1,0 +1,36 @@
+.wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    font-size: 24px;
+  }
+  
+  .navLink {
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid rgb(82, 62, 182);
+    color: #00132c;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+  
+  .navLink:hover,
+  .navLink:active {
+    outline: 0;
+  }
+  
+  .navLink:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .active {
+    color: rgba(255, 255, 255, 0.712);
+    background-color: rgb(13 117 228 / 71%);
+  }

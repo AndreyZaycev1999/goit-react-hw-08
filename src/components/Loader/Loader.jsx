@@ -1,14 +1,17 @@
-import { FallingLines } from "react-loader-spinner";
+import { ThreeCircles } from "react-loader-spinner";
 import css from "./Loader.module.css";
 
 const Loader = () => {
   return (
     <div className={css.loader}>
-      <FallingLines
-        color="rgb(99, 99, 141)"
-        width="100"
+      <ThreeCircles
         visible={true}
-        ariaLabel="falling-circles-loading"
+        height="100"
+        width="100"
+        color="rgb(82, 62, 182)"
+        ariaLabel="three-circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
       />
     </div>
   );

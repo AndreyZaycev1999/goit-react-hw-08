@@ -1,11 +1,19 @@
-.label {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 350px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid black;
-  }
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid rgb(82, 62, 182);
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.query {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+}

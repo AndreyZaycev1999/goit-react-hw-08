@@ -1,8 +1,19 @@
 .contact_list {
-  margin: 30px;
   display: flex;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
-  gap: 8px;
-  width: auto;
-  height: auto;
+}
+
+.contact_list > li {
+  background-color: rgba(206, 206, 216, 0.81);
+  border: 1px solid rgb(82, 62, 182);
+  border-radius: 15px;
+  min-width: 340px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    justify-content: flex-start;
+    background-color: transparent;
+    border: 1px solid rgb(82, 62, 182);
+    color: #00132c;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 23px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 20px;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+  }
+  
+  .title {
+    font-size: 36px;
+    margin: auto;
+    line-height: normal;
+    color: rgb(82, 62, 182);
+  }
+  
+  .image {
+    background-image: url(../../../public//welcome.jpeg);
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 500px;
+    width: 100%;
+    border-radius: 20px;
+  }
